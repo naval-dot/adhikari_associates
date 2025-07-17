@@ -1,0 +1,248 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: #fff;
+}
+.container {
+  max-width: 1140px;
+  margin: auto;
+  padding: 0 20px;
+}
+.flex {
+  display: flex;
+  gap: 10px;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.align-center {
+  align-items: center;
+}
+.gap-20 {
+  gap: 20px;
+}
+.text-center {
+  text-align: center;
+}
+.mt-20 {
+  margin-top: 20px;
+}
+
+/* Navbar */
+.navbar {
+  background: #0d47a1;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.logo {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+.logo .highlight {
+  color: #ff6f00;
+}
+.menu ul {
+  list-style: none;
+}
+.menu ul li {
+  display: inline-block;
+  margin-left: 20px;
+}
+.menu ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.menu ul li a:hover {
+  color: #ff6f00;
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  background: url(' https://source.unsplash.com/1600x700/?construction') no-repeat center center/cover;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  margin-top: 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+.primary-btn {
+  background: #ff6f00;
+  color: white;
+}
+
+/* Sections */
+.section-padding {
+  padding: 80px 0;
+}
+.bg-light {
+  background: #f8f8f8;
+}
+.bg-dark {
+  background: #0d47a1;
+}
+.text-white {
+  color: white;
+}
+
+/* About */
+.about-img img {
+  width: 100%;
+  border-radius: 10px;
+}
+.about-text {
+  padding-left: 40px;
+}
+.about-text ul li {
+  margin-bottom: 10px;
+}
+
+/* Services */
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+.service-item {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+.service-item i {
+  color: #ff6f00;
+  margin-bottom: 10px;
+}
+
+/* Portfolio */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+}
+.portfolio-item img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+.portfolio-item .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.portfolio-item:hover .overlay {
+  opacity: 1;
+}
+.portfolio-item a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 10px 20px;
+  background: #ff6f00;
+  border-radius: 5px;
+}
+
+/* Testimonials */
+.testimonial-slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+.testimonial {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  min-width: 300px;
+  margin-right: 20px;
+}
+
+/* Contact */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.map iframe {
+  border-radius: 10px;
+}
+
+/* Footer */
+.footer {
+  padding: 40px 0;
+}
+.footer-contact h4 {
+  margin-bottom: 15px;
+}
+.footer-contact p {
+  margin-bottom: 10px;
+}
+.social-icons a {
+  color: white;
+  margin-right: 10px;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+.social-icons a:hover {
+  color: #ff6f00;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .flex-md {
+    flex-direction: column;
+  }
+  .about-text {
+    padding-left: 0;
+    margin-top: 20px;
+  }
+}
